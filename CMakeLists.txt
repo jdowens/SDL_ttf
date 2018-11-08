@@ -11,6 +11,7 @@ if (WIN32)
   configure_file("${PROJECT_SOURCE_DIR}/VisualC/external/lib/x64/zlib1.dll" "${CMAKE_BINARY_DIR}/Debug" COPYONLY)
   configure_file("${PROJECT_SOURCE_DIR}/VisualC/external/lib/x64/zlib1.dll" "${CMAKE_BINARY_DIR}/Release" COPYONLY)
 else()
+  add_subdirectory(external/freetype-2.9.1)
 endif()
 
 add_library(SDL2_ttf SDL_ttf.h
